@@ -20,4 +20,5 @@
 ![处理文件](https://github.com/wjjer/elememt-expo/blob/master/file/img/3.png)
 
 ### 3. 文件处理完成后，会在控制台输出相应的日志信息
+
 ![处理完成](https://github.com/wjjer/elememt-expo/blob/master/file/img/4.png)
