@@ -364,7 +364,6 @@ public class UserInterface extends JFrame {
         });
         return filesList;
     }
-
 }
 
 
