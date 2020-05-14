@@ -30,7 +30,7 @@ public class UserInterface extends JFrame {
     private  JList jList_finishFile;
     private  JLabel label_prepare,label_end,label_outPath,label_console;
     //打开文件所在路径标签
-    private JButton btn_openOutPath,btn_clearOutFiles,btn_unfold,btn_selectFiles;
+    private JButton btn_openOutPath,btn_clearOutFiles,btn_unfold,btn_selectFiles,btnUpdate;
     private LinkedList<File> waitProcessFiles = new LinkedList<>();
 
     //接口
@@ -277,13 +277,29 @@ public class UserInterface extends JFrame {
         menuItem_update.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try {
+                    // 创建一个URI实例
+                    java.net.URI uri = java.net.URI.create("https://github.com/wjjer/elememt-expo/releases");
+                    // 获取当前系统桌面扩展
+                    java.awt.Desktop dp = java.awt.Desktop.getDesktop();
+                    // 判断系统桌面是否支持要执行的功能
+                    if (dp.isSupported(java.awt.Desktop.Action.BROWSE)) {
+                        // 获取系统默认浏览器打开链接
+                        dp.browse(uri);
+                    }else{
+                        System.out.println("暂不支持");
+                    }
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
                 //检查更新页面
-                JFrame mainWindow;
+               /* JFrame mainWindow;
                 mainWindow = new JFrame("检查更新");
                 JLabel label1 = new JLabel("版本号："+VERSION);
-                JButton btnUpdate = new JButton("检查更新");
+                btnUpdate = new JButton("检查更新");
                 btnUpdate.setBounds(10,10,100,20);
-                JLabel lbUpdateLog = new JLabel("下版本提供检查更新功能！");
+                JLabel lbUpdateLog = new JLabel("进入release页即可下载最新版本！");
                 lbUpdateLog.setBounds(10,90,450,20);
                 mainWindow.setVisible(true);
                 mainWindow.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -291,7 +307,7 @@ public class UserInterface extends JFrame {
                 mainWindow.add(btnUpdate);
                 mainWindow.add(lbUpdateLog);
                 mainWindow.pack();
-                mainWindow.setBounds(500,400,400,400);
+                mainWindow.setBounds(500,400,400,400);*/
             }
         });
         btn_unfold.addActionListener(new ActionListener() {
@@ -301,6 +317,9 @@ public class UserInterface extends JFrame {
 
             }
         });
+
+
+
     }
 
 
