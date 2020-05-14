@@ -109,7 +109,7 @@ public class Main {
         doc = Jsoup.connect(baseUrl + word).timeout(1000 * 60).get();
         //System.out.println(doc.html());
         Element table = doc.getElementsByClass("layui-tab-content").get(0);
-        Element tr = table.getElementsByTag("tr").get(3);
+        Element tr = table.getElementsByTag("tr").get(4);
         Element nameTr = table.getElementsByTag("tr").get(1);
         Element jgTr = table.getElementsByTag("tr").get(7);
         Element td = tr.getElementsByTag("td").get(1);
@@ -122,9 +122,9 @@ public class Main {
         //dataMap.put(code, codeLineData);
         builder.append("编码：【" + code + "】" + " 品名：【" + name + "】" + " 要素：【" + codeLineData + "】" + " 监管：【" + jg + "】\r\n");
         //将数据放入待导出的集合中
-        codeLineData = "商品编码,申报要素,"+StringUtils.substringBefore(codeLineData,"（以下要素仅上海海关要求）");
+        codeLineData = "商品编码;申报要素;"+StringUtils.substringBefore(codeLineData,"（以下要素仅上海海关要求）");
 
-        String[] elNameArr = codeLineData.split(",");
+        String[] elNameArr = codeLineData.split(";");
         ElementImportBean bean = new ElementImportBean();
         bean.setCode(code);
         bean.setCodeName("商品编码");
@@ -137,7 +137,7 @@ public class Main {
     public void test(){
         String data = "申报要素；0.品牌类型；1.出口享惠情况；2.材质（钢铁）；3.种类（图钉、U形钉、平头钉、波纹钉等）（以下要素仅上海海关要求）4.GTIN；5.CAS";
         data = StringUtils.substringBefore(data,"（以下要素仅上海海关要求）");
-        String[] elNameArr = data.split("；");
+        String[] elNameArr = data.split(";");
         for (int i = 0; i < elNameArr.length; i++) {
             System.out.println(elNameArr[i]);
         }

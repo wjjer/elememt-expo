@@ -22,3 +22,7 @@
 ### 3. 文件处理完成后，会在控制台输出相应的日志信息
 
 ![处理完成](https://github.com/wjjer/elememt-expo/blob/master/file/img/4.png)
+
+### 4. 最后打开处理完成的Excel如下所示
+
+![处理完成](https://github.com/wjjer/elememt-expo/blob/master/file/img/5.png)
