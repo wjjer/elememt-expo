@@ -23,6 +23,6 @@
 
 ![处理完成](https://github.com/wjjer/elememt-expo/blob/master/file/img/4.png)
 
-### 4. 最后打开处理完成的Excel如下所示
+### 4. 最后打开处理完成的Excel如下所示：
 
 ![处理完成](https://github.com/wjjer/elememt-expo/blob/master/file/img/5.png)
