@@ -258,7 +258,7 @@ public class UserInterface extends JFrame {
                 mainWindow = new JFrame("关于");
                 JLabel label1 = new JLabel("作者：          Allan");
                 label1.setBounds(10,10,450,20);
-                JLabel label2 = new JLabel("QQ群：         524115760");
+                JLabel label2 = new JLabel("github：https://github.com/wjjer/elememt-expo");
                 label2.setBounds(10,40,450,20);
                 JLabel label3 = new JLabel("数据源：        新通关网");
                 label3.setBounds(10,70,450,20);
