@@ -111,10 +111,10 @@ public class Main {
         Element table = doc.getElementsByClass("layui-tab-content").get(0);
         Element tr = table.getElementsByTag("tr").get(3);
         Element nameTr = table.getElementsByTag("tr").get(1);
-        Element jgTr = table.getElementsByTag("tr").get(6);
+        Element jgTr = table.getElementsByTag("tr").get(7);
         Element td = tr.getElementsByTag("td").get(1);
         Element nameTd = nameTr.getElementsByTag("td").get(1);
-        Element jgTd = jgTr.getElementsByTag("a").get(0);
+        Element jgTd = jgTr.getElementsByTag("td").get(0);
         //System.out.println(td.html());
         String name = nameTd.html();
         String jg = jgTd.html();
